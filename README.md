@@ -13,7 +13,7 @@ Simple gallery_app_flutter App made with Flutter in India.
 
 <br></br>
 
-# 🪪 License
+# 🪪 License(https://docs.google.com/document/d/e/2PACX-1vRJXI9V4lJSvpdwxkZbnsp_oPkGuh8SsyiWaToaKoBfymlFfN50e4yFPbLU5KJvDaJy8DV1ughGA6hP/pub)
 copyright ©[Nirmal Madhani](https://github.com/nirmalmadhani2002).<br>
 
 <div  align="center">
