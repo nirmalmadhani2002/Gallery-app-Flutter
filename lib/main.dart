@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gallery_app_flutter/controllers/Providers/theme_provider.dart';
 import 'package:gallery_app_flutter/views/screens/HomePage.dart';
+import 'package:gallery_app_flutter/views/screens/ImagesPage.dart';
 import 'package:gallery_app_flutter/views/screens/Splashscreen.dart';
 import 'package:provider/provider.dart';
 
@@ -42,6 +43,7 @@ class _MyAppState extends State<MyApp> {
           routes: {
             '/': (context) => const HomePage(),
             'splashscreen': (context) => const Splashscreen(),
+            'imagesPage': (context) => const ImagesPage(),
           },
         );
       },

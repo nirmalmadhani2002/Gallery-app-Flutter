@@ -62,29 +62,31 @@ class _HomePageState extends State<HomePage> {
             sliver: SliverSafeArea(
               top: false,
               sliver: SliverAppBar(
-                  pinned: true,
-                  floating: true,
-                  snap: true,
-                  centerTitle: true,
-                  title: Text(
-                    "Gallery App",
-                    style: GoogleFonts.brawler(fontSize: 30),
+                pinned: true,
+                floating: true,
+                snap: true,
+                centerTitle: true,
+                title: Text(
+                  "Gallery App",
+                  style: GoogleFonts.brawler(fontSize: 30),
+                ),
+                actions: [
+                  IconButton(
+                    icon: const Icon(Icons.light_mode),
+                    onPressed: () {
+                      Provider.of<ThemeProvider>(context, listen: false)
+                          .changeTheme();
+                    },
                   ),
-                  actions: [
-                    IconButton(
-                      icon: const Icon(Icons.light_mode),
-                      onPressed: () {
-                        Provider.of<ThemeProvider>(context, listen: false)
-                            .changeTheme();
-                      },
-                    ),
-                  ],
-                  bottom: const PreferredSize(
-                      preferredSize: Size.fromHeight(0),
-                      child: SizedBox(
-                        width: double.infinity,
-                        height: 0,
-                      ))),
+                ],
+                bottom: const PreferredSize(
+                  preferredSize: Size.fromHeight(0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 0,
+                  ),
+                ),
+              ),
             ),
           )
         ],
@@ -98,7 +100,8 @@ class _HomePageState extends State<HomePage> {
               ),
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                 width: size.width * 0.9,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
@@ -154,79 +157,86 @@ class _HomePageState extends State<HomePage> {
                                             const SizedBox(
                                               height: 10,
                                             ),
-                                            Column(
-                                              children: [
-                                                myimages(
-                                                  images: data.imageUrl,
-                                                  images1: data.imageUel1,
-                                                ),
-                                                const SizedBox(
-                                                  height: 10,
-                                                ),
-                                                myimages(
-                                                  images: data.imageUel2,
-                                                  images1: data.imageUel3,
-                                                ),
-                                                const SizedBox(
-                                                  height: 10,
-                                                ),
-                                                myimages(
-                                                  images: data.imageUel4,
-                                                  images1: data.imageUel5,
-                                                ),
-                                                const SizedBox(
-                                                  height: 10,
-                                                ),
-                                                myimages(
-                                                  images: data.imageUel6,
-                                                  images1: data.imageUel7,
-                                                ),
-                                                const SizedBox(
-                                                  height: 10,
-                                                ),
-                                                myimages(
-                                                  images: data.imageUel8,
-                                                  images1: data.imageUel9,
-                                                ),
-                                                const SizedBox(
-                                                  height: 10,
-                                                ),
-                                                myimages(
-                                                  images: data.imageUel10,
-                                                  images1: data.imageUel11,
-                                                ),
-                                                const SizedBox(
-                                                  height: 10,
-                                                ),
-                                                myimages(
-                                                  images: data.imageUel12,
-                                                  images1: data.imageUel13,
-                                                ),
-                                                const SizedBox(
-                                                  height: 10,
-                                                ),
-                                                myimages(
-                                                  images: data.imageUel14,
-                                                  images1: data.imageUel5,
-                                                ),
-                                                const SizedBox(
-                                                  height: 10,
-                                                ),
-                                                myimages(
-                                                  images: data.imageUel16,
-                                                  images1: data.imageUel17,
-                                                ),
-                                                const SizedBox(
-                                                  height: 10,
-                                                ),
-                                                myimages(
-                                                  images: data.imageUel18,
-                                                  images1: data.imageUel19,
-                                                ),
-                                                const SizedBox(
-                                                  height: 10,
-                                                ),
-                                              ],
+                                            InkWell(
+                                              onTap: (){
+                                                setState(() {
+
+                                                });
+                                              },
+                                              child: Column(
+                                                children: [
+                                                  myimages(
+                                                    images: data.imageUrl,
+                                                    images1: data.imageUel1,
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  myimages(
+                                                    images: data.imageUel2,
+                                                    images1: data.imageUel3,
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  myimages(
+                                                    images: data.imageUel4,
+                                                    images1: data.imageUel5,
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  myimages(
+                                                    images: data.imageUel6,
+                                                    images1: data.imageUel7,
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  myimages(
+                                                    images: data.imageUel8,
+                                                    images1: data.imageUel9,
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  myimages(
+                                                    images: data.imageUel10,
+                                                    images1: data.imageUel11,
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  myimages(
+                                                    images: data.imageUel12,
+                                                    images1: data.imageUel13,
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  myimages(
+                                                    images: data.imageUel14,
+                                                    images1: data.imageUel5,
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  myimages(
+                                                    images: data.imageUel16,
+                                                    images1: data.imageUel17,
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  myimages(
+                                                    images: data.imageUel18,
+                                                    images1: data.imageUel19,
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ],
                                         ),
@@ -265,26 +275,36 @@ class _HomePageState extends State<HomePage> {
         const SizedBox(
           width: 8,
         ),
-        SizedBox(
-          width: 180,
-          height: 300,
-          child: ClipRRect(
-            child: Image.network(
-              images,
-              fit: BoxFit.cover,
+        InkWell(
+          onTap:(){
+            Navigator.of(context).pushNamed("imagesPage",arguments: images);
+          },
+          child: SizedBox(
+            width: 180,
+            height: 300,
+            child: ClipRRect(
+              child: Image.network(
+                images,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ),
         const SizedBox(
           width: 8,
         ),
-        SizedBox(
-          width: 180,
-          height: 300,
-          child: ClipRRect(
-            child: Image.network(
-              images1,
-              fit: BoxFit.cover,
+        InkWell(
+          onTap:(){
+            Navigator.of(context).pushNamed("imagesPage",arguments: images1);
+          },
+          child: SizedBox(
+            width: 180,
+            height: 300,
+            child: ClipRRect(
+              child: Image.network(
+                images1,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ),
