@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gallery_app_flutter/views/Global.dart';
-
-import '../../models/post.dart';
+import 'package:async_wallpaper/async_wallpaper.dart';
+import 'package:image_downloader/image_downloader.dart';
 
 class ImagesPage extends StatefulWidget {
   const ImagesPage({super.key});
@@ -19,17 +18,42 @@ class _ImagesPageState extends State<ImagesPage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(
-            height:size.height,
-            width: size.width,
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Image.network(
-                args,
-                fit: BoxFit.cover,
-                cacheHeight: 600,
+          Stack(
+            alignment: Alignment(0,0.9),
+            children: [
+              SizedBox(
+                height: size.height,
+                width: size.width,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Image.network(
+                    args,
+                    fit: BoxFit.cover,
+                    cacheHeight: 600,
+                  ),
+                ),
               ),
-            ),
+              Column(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      AsyncWallpaper.setWallpaper(url: args,wallpaperLocation: AsyncWallpaper.BOTH_SCREENS,);
+                    },
+                    child: const Text(
+                      "Wallpaper Set",
+                      style: TextStyle(fontSize: 30, color: Colors.black),
+                    ),
+                  ),
+                  // ElevatedButton(
+                  //   onPressed: () {},
+                  //   child: Text(
+                  //     "Download",
+                  //     style: TextStyle(fontSize: 30, color: Colors.black),
+                  //   ),
+                  // ),
+                ],
+              ),
+            ],
           ),
         ],
       ),

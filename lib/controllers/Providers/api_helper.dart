@@ -13,7 +13,6 @@ class APIHelper {
     http.Response res = await http.get(
       Uri.parse(
         'https://pixabay.com/api/?key=35722369-0ff268194d7105d16de321576&q=${Global.images}&image_type=photo&pretty=true',
-      // https://pixabay.com/api/?key=35722369-0ff268194d7105d16de321576&q=yellow+flowers&image_type=photo&pretty=true
       ),
     );
 

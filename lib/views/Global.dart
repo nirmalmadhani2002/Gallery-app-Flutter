@@ -1,3 +1,3 @@
 class Global{
-  static String images = 'cricket';
+  static String images = 'games';
 }

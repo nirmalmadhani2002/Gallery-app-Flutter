@@ -157,86 +157,79 @@ class _HomePageState extends State<HomePage> {
                                             const SizedBox(
                                               height: 10,
                                             ),
-                                            InkWell(
-                                              onTap: (){
-                                                setState(() {
-
-                                                });
-                                              },
-                                              child: Column(
-                                                children: [
-                                                  myimages(
-                                                    images: data.imageUrl,
-                                                    images1: data.imageUel1,
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  myimages(
-                                                    images: data.imageUel2,
-                                                    images1: data.imageUel3,
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  myimages(
-                                                    images: data.imageUel4,
-                                                    images1: data.imageUel5,
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  myimages(
-                                                    images: data.imageUel6,
-                                                    images1: data.imageUel7,
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  myimages(
-                                                    images: data.imageUel8,
-                                                    images1: data.imageUel9,
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  myimages(
-                                                    images: data.imageUel10,
-                                                    images1: data.imageUel11,
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  myimages(
-                                                    images: data.imageUel12,
-                                                    images1: data.imageUel13,
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  myimages(
-                                                    images: data.imageUel14,
-                                                    images1: data.imageUel5,
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  myimages(
-                                                    images: data.imageUel16,
-                                                    images1: data.imageUel17,
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  myimages(
-                                                    images: data.imageUel18,
-                                                    images1: data.imageUel19,
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                ],
-                                              ),
+                                            Column(
+                                              children: [
+                                                myimages(
+                                                  images: data.imageUrl,
+                                                  images1: data.imageUel1,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                myimages(
+                                                  images: data.imageUel2,
+                                                  images1: data.imageUel3,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                myimages(
+                                                  images: data.imageUel4,
+                                                  images1: data.imageUel5,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                myimages(
+                                                  images: data.imageUel6,
+                                                  images1: data.imageUel7,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                myimages(
+                                                  images: data.imageUel8,
+                                                  images1: data.imageUel9,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                myimages(
+                                                  images: data.imageUel10,
+                                                  images1: data.imageUel11,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                myimages(
+                                                  images: data.imageUel12,
+                                                  images1: data.imageUel13,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                myimages(
+                                                  images: data.imageUel14,
+                                                  images1: data.imageUel5,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                myimages(
+                                                  images: data.imageUel16,
+                                                  images1: data.imageUel17,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                myimages(
+                                                  images: data.imageUel18,
+                                                  images1: data.imageUel19,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                              ],
                                             ),
                                           ],
                                         ),
@@ -276,13 +269,14 @@ class _HomePageState extends State<HomePage> {
           width: 8,
         ),
         InkWell(
-          onTap:(){
-            Navigator.of(context).pushNamed("imagesPage",arguments: images);
+          onTap: () {
+            Navigator.of(context).pushNamed("imagesPage", arguments: images);
           },
           child: SizedBox(
             width: 180,
             height: 300,
             child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Image.network(
                 images,
                 fit: BoxFit.cover,
@@ -294,13 +288,14 @@ class _HomePageState extends State<HomePage> {
           width: 8,
         ),
         InkWell(
-          onTap:(){
-            Navigator.of(context).pushNamed("imagesPage",arguments: images1);
+          onTap: () {
+            Navigator.of(context).pushNamed("imagesPage", arguments: images1);
           },
           child: SizedBox(
             width: 180,
             height: 300,
             child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Image.network(
                 images1,
                 fit: BoxFit.cover,
