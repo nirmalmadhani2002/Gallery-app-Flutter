@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:async_wallpaper/async_wallpaper.dart';
-import 'package:image_downloader/image_downloader.dart';
 
 class ImagesPage extends StatefulWidget {
   const ImagesPage({super.key});
@@ -19,7 +18,7 @@ class _ImagesPageState extends State<ImagesPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Stack(
-            alignment: Alignment(0,0.9),
+            alignment: const Alignment(0,0.9),
             children: [
               SizedBox(
                 height: size.height,
@@ -44,13 +43,6 @@ class _ImagesPageState extends State<ImagesPage> {
                       style: TextStyle(fontSize: 30, color: Colors.black),
                     ),
                   ),
-                  // ElevatedButton(
-                  //   onPressed: () {},
-                  //   child: Text(
-                  //     "Download",
-                  //     style: TextStyle(fontSize: 30, color: Colors.black),
-                  //   ),
-                  // ),
                 ],
               ),
             ],
